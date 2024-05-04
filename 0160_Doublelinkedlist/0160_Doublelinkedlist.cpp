@@ -104,6 +104,16 @@ void deleteNode()
         return;
     }
 
+    //Node to be deleted is the firts node
+    if (current == START)
+    {
+        START = START->next;                                            //STEP 2: update the START pointer
+        if (START != NULL)
+        {
+            START->prev = NULL;                                         //step
+        }
+    }
+
 int main()
 {
     std::cout << "Hello World!\n";
