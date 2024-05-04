@@ -45,6 +45,23 @@ void addNode() {
             current = current->next; // STEP 1.e: move the current to the next node
         }
 
+        newNode->next = current; // STEP 4: Make the next field of the new node point to current
+        newNode->prev = previous; // STEP 5: Make the previous field of the new node point to previous
+
+        if (current != NULL) {
+            current->prev = newNode; // STEP 6: Make the previous field of the current
+        }
+
+        if (previous != NULL) {
+            previous->next = newNode; // STEP 7 : make the next field of the previous node
+        }
+        else {
+            //If previous is still NULL, it means newNode is now the first node
+            START = newNode;
+        }
+    }
+}
+
 int main()
 {
     std::cout << "Hello World!\n";
