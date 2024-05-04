@@ -131,6 +131,9 @@ bool listEmpty()
 {
     return (START == NULL);
 }
+
+void traverse()
+
 int main()
 {
     std::cout << "Hello World!\n";
